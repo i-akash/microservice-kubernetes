@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipment-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shipment-api
+    spec:
+      containers:
+      - name: shipment-api
+        image: "i7akash/shipment-api:latest"
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_ENVIRONMENT 
+          value: Development 
+        - name: Queue
+          value: queue-service
+  selector:
+    matchLabels:
+      app: shipment-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shipment-api
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8084
+    targetPort: 80
+  selector:
+    app: shipment-api

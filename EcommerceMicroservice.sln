@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAPI", "AuthAPI\AuthAPI.csproj", "{656495BF-FE50-41AC-BBD6-9ECD6E8E3DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderAPI", "OrderAPI\OrderAPI.csproj", "{CAD2D658-603F-45E7-90EE-0809675068F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI", "PaymentAPI\PaymentAPI.csproj", "{5B0D9D8E-DDF8-46D6-81B6-77F367B4B5CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipmentAPI", "ShipmentAPI\ShipmentAPI.csproj", "{CD16685C-8383-4F5B-B0EE-6C398EE1B64C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationAPI", "NotificationAPI\NotificationAPI.csproj", "{CF281031-1F1F-4B7A-AE67-A1572983D743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{C6C1BD9F-86DB-44A8-8B99-DFF5C727D5DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rabbit", "Rabbit", "{4CA6B9DD-A65E-473C-91C4-0009E5D0C693}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manifests", "Manifests", "{25CB2789-0B90-4EE2-9D47-34D7F6431485}"
+	ProjectSection(SolutionItems) = preProject
+		Rabbit\manifests\configmap.yaml = Rabbit\manifests\configmap.yaml
+		Rabbit\manifests\ingress.yaml = Rabbit\manifests\ingress.yaml
+		Rabbit\manifests\pvc.yaml = Rabbit\manifests\pvc.yaml
+		Rabbit\manifests\secret.yaml = Rabbit\manifests\secret.yaml
+		Rabbit\manifests\service.yaml = Rabbit\manifests\service.yaml
+		Rabbit\manifests\statefulset.yaml = Rabbit\manifests\statefulset.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{656495BF-FE50-41AC-BBD6-9ECD6E8E3DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656495BF-FE50-41AC-BBD6-9ECD6E8E3DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656495BF-FE50-41AC-BBD6-9ECD6E8E3DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656495BF-FE50-41AC-BBD6-9ECD6E8E3DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD2D658-603F-45E7-90EE-0809675068F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD2D658-603F-45E7-90EE-0809675068F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD2D658-603F-45E7-90EE-0809675068F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD2D658-603F-45E7-90EE-0809675068F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0D9D8E-DDF8-46D6-81B6-77F367B4B5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0D9D8E-DDF8-46D6-81B6-77F367B4B5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0D9D8E-DDF8-46D6-81B6-77F367B4B5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0D9D8E-DDF8-46D6-81B6-77F367B4B5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD16685C-8383-4F5B-B0EE-6C398EE1B64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD16685C-8383-4F5B-B0EE-6C398EE1B64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD16685C-8383-4F5B-B0EE-6C398EE1B64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD16685C-8383-4F5B-B0EE-6C398EE1B64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF281031-1F1F-4B7A-AE67-A1572983D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF281031-1F1F-4B7A-AE67-A1572983D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF281031-1F1F-4B7A-AE67-A1572983D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF281031-1F1F-4B7A-AE67-A1572983D743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C1BD9F-86DB-44A8-8B99-DFF5C727D5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C1BD9F-86DB-44A8-8B99-DFF5C727D5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C1BD9F-86DB-44A8-8B99-DFF5C727D5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C1BD9F-86DB-44A8-8B99-DFF5C727D5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25CB2789-0B90-4EE2-9D47-34D7F6431485} = {4CA6B9DD-A65E-473C-91C4-0009E5D0C693}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84B9D0F6-FE6A-4197-8117-25096F6F2DA9}
+	EndGlobalSection
+EndGlobal

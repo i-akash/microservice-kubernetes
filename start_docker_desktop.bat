@@ -5,7 +5,7 @@ start "" "C:\Program Files\Docker\Docker\Docker Desktop.exe"
 
 
 echo Starting minikube...
-minikube start
+minikube start --driver=docker
 
 echo minikube tunnel...
 minikube tunnel

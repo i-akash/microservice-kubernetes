@@ -1,1 +1,5 @@
 docker build .  -t i7akash/payment-api:latest
+
+
+
+kubectl port-forward kibana-6c9fb4b5b7-plbg2 5601:5601

@@ -28,3 +28,17 @@ kubectl apply -f .
 cd ../../
 
 
+cd .\ElasticSearch\kubernetes
+kubectl apply -f .
+cd ../../
+
+cd .\FluentD\kubernetes
+kubectl apply -f .
+cd ../../
+
+
+cd .\Rabbit\kubernetes
+kubectl apply -f .
+cd ../../
+
+

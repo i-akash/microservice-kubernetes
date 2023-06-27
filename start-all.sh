@@ -10,18 +10,26 @@
 # docker push i7akash/payment-api:latest
 # docker push i7akash/shipment-api:latest
 
-cd ./AuthAPI/kubernetes
-kubectl apply -f .
-cd ../../
+# cd ./AuthAPI/kubernetes
+# kubectl apply -f .
+# cd ../../
 
 cd ./PaymentAPI/kubernetes
 kubectl apply -f .
 cd ../../
 
-cd ./ShipmentAPI/kubernetes
+# cd ./ShipmentAPI/kubernetes
+# kubectl apply -f .
+# cd ../../
+
+# cd ./Rabbit/kubernetes
+# kubectl apply -f .
+# cd ../../
+
+cd ./ElasticSearch/kubernetes
 kubectl apply -f .
 cd ../../
 
-cd ./Rabbit/kubernetes
+cd ./FluentD/kubernetes
 kubectl apply -f .
 cd ../../

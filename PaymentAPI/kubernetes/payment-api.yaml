@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: payment-api
+  name: payment-api-svc
 spec:
   type: LoadBalancer
   ports:

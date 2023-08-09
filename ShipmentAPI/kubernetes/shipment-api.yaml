@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: shipment-api
+  name: shipment-api-svc
 spec:
   type: LoadBalancer
   ports:

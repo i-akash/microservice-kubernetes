@@ -1,21 +1,42 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: gateway-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "0"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-    #nginx.ingress.kubernetes.io/proxy-max-temp-file-size: "1024m"
-spec:
-  rules:
-    - host: mp3converter.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: gateway
-                port:
-                  number: 8080
+ apiVersion: networking.k8s.io/v1
+ kind: Ingress
+ metadata:
+   name: auth-api-ingress
+   annotations:
+     nginx.ingress.kubernetes.io/rewrite-target: /
+ spec:
+   ingressClassName: nginx
+   rules:
+     - host: auth.api.com
+       http:
+         paths:
+           - path: /
+             pathType: Prefix
+             backend:
+               service:
+                 name: auth-api-svc
+                 port:
+                   number: 8085
+
+     - host: shipment.api.com
+       http:
+         paths:
+           - path: /
+             pathType: Prefix
+             backend:
+               service:
+                 name: shipment-api-svc
+                 port:
+                   number: 8084
+                   
+     - host: payment.api.com
+       http:
+         paths:
+           - path: /
+             pathType: Prefix
+             backend:
+               service:
+                 name: payment-api-svc
+                 port:
+                   number: 8083
+				   

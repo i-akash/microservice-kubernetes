@@ -58,7 +58,26 @@ namespace PaymentAPI.Controllers
                 _logger.LogError($"Failed sending event :{orderId},\n Error: {e.Message}");
             }
 
+
             _logger.LogInformation($"published event :{orderId}");
+
+            var order = new Orderevent
+            {
+                OrderId = orderId
+            };
+            
+
+            IOrderevent orderEvent = order;
+
+            await _bus.Publish(order);
+
+
+            _logger.LogInformation($"published order :{orderId}");
+
+            await _bus.Publish(orderEvent);
+
+
+            _logger.LogInformation($"published iorder :{orderId}");
 
             return Ok(true);
         }

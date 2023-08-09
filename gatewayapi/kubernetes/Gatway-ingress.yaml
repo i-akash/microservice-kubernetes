@@ -17,7 +17,6 @@
                  name: auth-api-svc
                  port:
                    number: 8085
-
      - host: shipment.api.com
        http:
          paths:
@@ -28,7 +27,6 @@
                  name: shipment-api-svc
                  port:
                    number: 8084
-                   
      - host: payment.api.com
        http:
          paths:
@@ -39,4 +37,3 @@
                  name: payment-api-svc
                  port:
                    number: 8083
-				   

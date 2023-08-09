@@ -33,4 +33,4 @@ spec:
       volumes:
         - name: rabbitmq-volume
           persistentVolumeClaim:
-            claimName: rabbitmq-pvc
+            claimName: azurefile

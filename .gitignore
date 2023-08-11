@@ -1,0 +1,33 @@
+# .NET Core
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.json
+*.xml
+*.log
+bin/
+obj/
+*.swp
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+
+# Mac OS
+.DS_Store
+
+# Linux
+*~
+
+# Package directories
+packages/

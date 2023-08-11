@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-api-configmap
+  namespace : kubecluster
+data:
+  ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,1 @@
+ curl -skSL https://raw.githubusercontent.com/kubernetes-sigs/azurefile-csi-driver/v1.28.1/deploy/install-driver.sh | bash -s v1.28.1 --

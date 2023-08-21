@@ -31,7 +31,7 @@ spec:
         volumeMounts:
         - name: elasticsearch-volume
           mountPath: /usr/share/elasticsearch/data
-    volumes:
+      volumes:
         - name: elasticsearch-volume
           persistentVolumeClaim:
             claimName: azurefile

@@ -21,7 +21,7 @@ spec:
       shareName: kubecluster-file-share
     nodeStageSecretRef:
       name: azure-storage-secret
-      namespace: default
+      namespace: kubecluster
   mountOptions:
     - dir_mode=0777
     - file_mode=0777

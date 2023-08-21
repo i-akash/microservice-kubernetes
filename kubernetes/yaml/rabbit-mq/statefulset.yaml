@@ -29,7 +29,7 @@ spec:
             - secretRef:
                 name: rabbitmq-secret
           volumeMounts:
-            - mountPath: "/var/lib/rabbitmq"
+            - mountPath: "/var/lib/rabbitmq/mnesia"
               name: rabbitmq-volume
       volumes:
         - name: rabbitmq-volume

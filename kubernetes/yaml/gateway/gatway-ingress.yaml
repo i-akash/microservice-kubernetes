@@ -45,7 +45,7 @@
             pathType: Prefix
             backend:
               service:
-                name: rabbitmq
+                name: mngt-service
                 port:
                   number: 15672
      - host: kibana.manager.com

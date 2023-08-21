@@ -11,8 +11,11 @@ apply_yaml_files() {
     fi
   done
   
-  for subdir in "$dir"/*/; do
-    apply_yaml_files "$subdir"
+  for subdir in "$dir"/*; do
+    if [ -d "$subdir" ]; then
+      echo "Subdir: $subdir"
+      apply_yaml_files "$subdir"
+    fi
   done
 }
 

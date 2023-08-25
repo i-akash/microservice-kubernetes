@@ -58,3 +58,13 @@
                 name: kibana
                 port:
                   number: 5601
+     - host: kafka.manager.com
+       http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kafka-ui-svc
+                port:
+                  number: 8080

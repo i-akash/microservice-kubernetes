@@ -1,0 +1,49 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-svc
+  namespace : kubecluster
+  labels:
+    app: kafka
+spec:
+  ports:
+  - port: 9092
+  selector:
+    app: kafka
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: kafka-deployment
+  namespace : kubecluster
+spec:
+  serviceName: kafka-svc
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kafka
+  template:
+    metadata:
+      labels:
+        app: kafka
+    spec:
+      containers:
+      - name: kafka
+        image: ubuntu/kafka:edge
+        env:
+          - name: ZOOKEEPER_HOST
+            value: zookeeper-svc
+        args: ["/etc/kafka/server.properties", "--override", "advertised.listeners=PLAINTEXT://kafka-service:9092"]
+        ports:
+        - containerPort: 9092
+          name: kafka
+          protocol: TCP
+        volumeMounts:
+            - mountPath: "/var/lib/kafka"
+              name: kafka-volume
+      volumes:
+        - name: kafka-volume
+          persistentVolumeClaim:
+            claimName: azurefile

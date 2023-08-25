@@ -1,5 +1,5 @@
 docker build .  -t i7akash/payment-api:latest
 
-
+ sudo scp -i ~/kube-cluster_key.pem -r yaml/* kubecluster@20.205.40.14:~/
 
 kubectl port-forward kibana-6c9fb4b5b7-plbg2 5601:5601
